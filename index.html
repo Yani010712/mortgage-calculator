@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Online Mortgage Calculator!</title>
+    <link rel="stylesheet" href="index.css">
+    <script type="text/javascript" src="index.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=DM+Serif+Text&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+    <div class="calculator-container">
+      <div class="tip-header">
+        <h1> Online Mortgage Calculator!</h1><hr>
+
+      </div>
+      <!-- Calculator -->
+      <div class="mortgage-content-container">
+        <form class="Mortgage-form" action="index.html" method="post">
+          <label for="how-much">Principal </label> $
+          <input id="principal" type="text" ><br>
+
+          <label for="int-rate"> Rate</label>
+          <input id="rate"type="text"> % <br>
+
+          <label for="loans-term">Term</label>
+          <select id="number-of-years" class="" name="service">
+            <option value="choose">--Choose an option-- </option>
+            <option value="30">30 Year Fixed</option>
+            <option value="15">15 Year Fixed</option>
+          </select><br>
+          <input id="calculate-button" type="button" value="calculate!" onclick="alculateMortgage">
+          <!-- <input id="calculate-button" value="calculate" class="btn btn-primary" onclick="calculateMortgage"> -->
+          <!-- Display Tip -->
+          <div id="monthlyPay" style="display: none;">
+            <h3 id="displayAmt">Monthly Payment: <sup>$</sup><span id="payment">0.00</span><h3>
+          </div>
+        </form>
+        <!-- Display Tip -->
+        <!-- <div id="monthlyPay" style="display: none;">
+          <h3>Monthly payment:<h3>
+          <sup>$</sup><span id="payment">0.00</span>
+        </div> -->
+      </div>
+      <!-- calculator end -->
+    </div>
+
+
+
+  </body>
+</html>
